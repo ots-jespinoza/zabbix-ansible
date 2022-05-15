@@ -4,7 +4,7 @@ Zabbix ansible playbook.
 
 ## NOTE:
 
-** Before you begin **, make sure to modify the *hosts*, *ansible.cfg*, and *group_vars/all* files to reflect your environment.
+**Before you begin**, make sure to modify the *hosts*, *ansible.cfg*, and *group_vars/all* files to reflect your environment.
 
 ## Known bugs:
 
