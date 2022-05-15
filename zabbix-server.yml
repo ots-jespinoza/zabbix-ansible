@@ -1,0 +1,36 @@
+---
+
+- hosts: zabbix_database
+  become: true
+  roles:
+    - role: geerlingguy.mysql
+
+- name: Installing Zabbix
+  hosts: zabbix_server
+  become: true
+  collections:
+    - community.zabbix
+
+  roles:
+    - role: zabbix_server
+    - role: geerlingguy.apache
+    - role: wdijkerman.php
+    - role: zabbix_web
+
+  tasks:
+    - name: install php7.4 packages
+      package:
+        state: latest
+        name:
+          - libapache2-mod-php7.4
+          - php7.4-mysql
+          - php7.4-bcmath
+    - name: Enable php7 mod
+      become: true
+      shell: '/usr/sbin/a2dismod php8.1 && /usr/sbin/a2enmod php7.4 && /usr/sbin/a2enmod proxy_fcgi setenvif && /usr/sbin/a2enconf php7.4-fpm'
+
+  post_tasks:
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
