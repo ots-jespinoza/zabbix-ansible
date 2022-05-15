@@ -1,6 +1,6 @@
-# zabbix-ansible
+# zabbix-ansible-poc
 
-Zabbix ansible playbook.
+Zabbix ansible PoC playbook.
 
 ## NOTE:
 
