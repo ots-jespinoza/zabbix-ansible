@@ -8,4 +8,4 @@ Zabbix ansible playbook.
 
 ## Known bugs:
 
-The *zabbix_web* role used from the *community.zabbix* ansible-galaxy collection will error out when trying to apply RedHat repo on a noed running Ubuntu. To get around this you can modify the roles *main./task.yml* removing the RedHat stanza found at line 54-58.
+The *zabbix_web* role used from the *community.zabbix* ansible-galaxy collection will error out when trying to apply RedHat repo on nodes running Ubuntu. To get around this you can modify the roles *main./task.yml* removing the RedHat stanza found at line 54-58.
