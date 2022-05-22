@@ -1,8 +1,8 @@
 [zabbix_server]
-node-1 ansible_host=
+zabbix.example.com
 
 [zabbix_database]
-node-2 ansible_host=
+zabbix-db.example.com
 
 [database:children]
 zabbix_database
