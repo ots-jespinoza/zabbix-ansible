@@ -1,8 +1,8 @@
 [zabbix_server]
-node-1 ansible_host=10.10.10.x
+node-1 ansible_host=
 
 [zabbix_database]
-node-2 ansible_host=10.10.10.x
+node-2 ansible_host=
 
 [database:children]
 zabbix_database

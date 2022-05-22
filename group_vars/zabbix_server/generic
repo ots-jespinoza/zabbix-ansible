@@ -4,7 +4,7 @@
 zabbix_server_database: mysql
 zabbix_server_database_long: mysql
 zabbix_server_dbport: 3306
-zabbix_server_dbhost: zabbix-database
+zabbix_server_dbhost: "{{ hostvars['node-2']['ansible_host'] }}"
 zabbix_server_dbhost_run_install: true
 zabbix_server_privileged_host: "{{ hostvars['node-1']['ansible_host'] }}"
 zabbix_server_mysql_login_host: localhost
